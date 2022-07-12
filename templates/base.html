@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{ Configs.ctf_name }}</title>
+	<title>{{ Configs.ctf_name }}dh</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="{{ Configs.ctf_small_icon }}" type="image/x-icon">
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/fonts.css') }}">
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/main.css') }}">
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/core.css') }}">
+
+	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/custom.hj.css') }}">
 	{% block stylesheets %}
 	{% endblock %}
 
@@ -20,7 +22,7 @@
 			'userId': {{ Session.id }},
 			'userName': "{{ User.name }}",
 			'userEmail': "{{ User.email }}",
-			'teamId': {{ Team.id | tojson }}, 
+			'teamId': {{ Team.id | tojson }},
 			'teamName': "{{ Team.name }}",
 			'start': {{ Configs.start | tojson }},
 			'end': {{ Configs.end | tojson }},
