@@ -100,8 +100,9 @@
 			</div>
 
 			<div class="clearfix"></div>
+			<br>
 
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-12">
 					<h3>Awards</h3>
 				</div>
@@ -117,20 +118,18 @@
 						<p class="text-center">{{ award.value }}</p>
 					</div>
 				{% endfor %}
-			</div>
-
-			<br>
+			</div> -->
 
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Solves</h3>
+					<h3>문제 풀이 목록</h3>
 					<table class="table table-striped">
 						<thead>
 						<tr>
-							<td><b>Challenge</b></td>
-							<td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-							<td><b>Value</b></td>
-							<td><b>Time</b></td>
+							<td><b>문제 명</b></td>
+							<td class="d-none d-md-block d-lg-block"><b>카테고리</b></td>
+							<td><b>점수</b></td>
+							<td><b>풀이 시간</b></td>
 						</tr>
 						</thead>
 						<tbody>
@@ -142,7 +141,7 @@
 									</a>
 								</td>
 								<td class="d-none d-md-block d-lg-block">{{ solve.challenge.category }}</td>
-								<td>{{ solve.challenge.value }}</td>
+								<td>{{ solve.challenge.value }} points</td>
 								<td class="solve-time">
 									<span data-time="{{ solve.date | isoformat }}"></span>
 								</td>

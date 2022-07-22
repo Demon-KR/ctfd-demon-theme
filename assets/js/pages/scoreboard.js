@@ -45,9 +45,13 @@ const buildGraphData = () => {
     }
 
     const option = {
+      backgroundColor: "rgba(23, 25, 35, 1)",
       title: {
         left: "center",
-        text: "Top 10 " + (CTFd.config.userMode === "teams" ? "Teams" : "Users")
+        text: "Top 10 " + (CTFd.config.userMode === "teams" ? "Teams" : "Users"),
+	textStyle: {
+          color: "rgba(180, 180, 180, 1)"
+	}
       },
       tooltip: {
         trigger: "axis",
@@ -60,7 +64,10 @@ const buildGraphData = () => {
         orient: "horizontal",
         align: "left",
         bottom: 35,
-        data: []
+        data: [],
+	textStyle: {
+          color: "rgba(180, 180, 180, 1)"
+	}
       },
       toolbox: {
         feature: {
@@ -77,12 +84,18 @@ const buildGraphData = () => {
         {
           type: "time",
           boundaryGap: false,
-          data: []
+          data: [],
+          axisLabel: {
+            color: "rgba(180, 180, 180, 1)"
+          }
         }
       ],
       yAxis: [
         {
-          type: "value"
+          type: "value",
+          axisLabel: {
+            color: "rgba(180, 180, 180, 1)"
+          }
         }
       ],
       dataZoom: [
@@ -175,5 +188,3 @@ $(() => {
   setInterval(update, 300000); // Update scores every 5 minutes
   createGraph();
 });
-
-window.updateScoreboard = update;
